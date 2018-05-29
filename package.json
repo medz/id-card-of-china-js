@@ -13,7 +13,19 @@
   "repository": "https://github.com/medz/id-card-of-china-js.git",
   "author": "Seven Du <shiweidu@outlook.com>",
   "license": "MIT",
+  "scripts": {
+    "dev": "NODE_ENV=development webpack --debug --progress --colors"
+  },
   "devDependencies": {
-    "webpack": "^4.10.1"
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "webpack": "^4.10.1",
+    "webpack-cli": "^2.1.4"
+  },
+  "sideEffects": false,
+  "dependencies": {
+    "gb-t-2260": "^1.0.0"
   }
 }
