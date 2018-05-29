@@ -1,0 +1,19 @@
+{
+  "name": "id-card-of-china-js",
+  "version": "1.0.0",
+  "keywords": [
+    "id",
+    "card",
+    "identity",
+    "id-card",
+    "china",
+    "identity card"
+  ],
+  "description": "一个基于「公民身份身份号码」规则获取身份证号码中包含的基础信息组件（JS）",
+  "repository": "https://github.com/medz/id-card-of-china-js.git",
+  "author": "Seven Du <shiweidu@outlook.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^4.10.1"
+  }
+}
