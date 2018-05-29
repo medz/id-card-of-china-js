@@ -4,7 +4,8 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 module.exports = {
     target: "web",
     mode: process.env.NODE_ENV === "development" ? "development" : "production",
-    entry: path.resolve(__dirname, "src", "main.js"),
+    devtool: "source-map",
+    entry: path.resolve(__dirname, "src", "main.ts"),
     output: {
         filename: "id-card-china.js",
         path: path.join(__dirname, "dist"),
@@ -14,12 +15,15 @@ module.exports = {
     },
     module: {
         rules: [
-            { test: /\.js/, exclude: /node_modules/, loader: "babel-loader" }
+            { test: /\.ts/, exclude: /node_modules/, loader: "ts-loader" }
         ]
     },
     plugins: [
         new CleanWebpackPlugin(["dist"])
     ],
+    resolve: {
+        extensions: [".ts", ".js"]
+    },
     externals: [
         "gb-t-2260"
     ]
