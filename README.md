@@ -48,19 +48,19 @@ import Identity from "id-card-of-china";
 
 const peopleIdentity = new Identity("350301198906180060");
 
-$peopleIdentity = new Identity($peopleIDNumber);
-$peopleRegion = $peopleIdentity.region();
+const peopleIdentity = new Identity(peopleIDNumber);
+const peopleRegion = peopleIdentity.region();
 
-var_dump(
-    $peopleIdentity.legal(),    // true | false
-    $peopleIdentity.birthday(), // 1989-06-18
-    $peopleIdentity.gender(),   // 女 | 男
-    $peopleRegion.code(),       // 350302
-    $peopleRegion.province(),   // 福建省
-    $peopleRegion.city(),       // 莆田市
-    $peopleRegion.county(),     // 城厢区
-    $peopleRegion.tree(),       // ["福建省", "莆田市", "城厢区"]
-    $peopleRegion.treeString(' ') // 福建省 莆田市 城厢区
+console.log(
+    peopleIdentity.legal(),    // true | false
+    peopleIdentity.birthday(), // 1989-06-18
+    peopleIdentity.gender(),   // 女 | 男
+    peopleRegion.code(),       // 350302
+    peopleRegion.province(),   // 福建省
+    peopleRegion.city(),       // 莆田市
+    peopleRegion.county(),     // 城厢区
+    peopleRegion.tree(),       // ["福建省", "莆田市", "城厢区"]
+    peopleRegion.treeString(' ') // 福建省 莆田市 城厢区
 );
 ```
 
