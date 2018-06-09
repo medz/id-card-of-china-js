@@ -1,6 +1,8 @@
 import { IdentityInterface } from "./identity.interface";
 import validateCheckCode from "./utils/validate-check-code";
 import validateDate from "./utils/validate-date";
+import { RegionInterface } from "./region.interface";
+import { Region } from "./region";
 
 export class Identity implements IdentityInterface
 {
@@ -50,5 +52,25 @@ export class Identity implements IdentityInterface
         const day: string = this.identityCardNumber.substr(12, 2);
 
         return `${yaer}-${month}-${day}`;
+    }
+
+    /**
+     * Get the ID Card People Gender.
+     *
+     * @return {string}
+     * @author Seven Du <shiweidu@outlook.com>
+     */
+    public gender(): string
+    {
+        return (parseInt(this.identityCardNumber.substr(16, 1)) % 2) === 0 ? '女' : '男';
+    }
+
+    /**
+     * Get region.
+     * @author Seven Du <shiweidu@outlook.com>
+     */
+    public region(): RegionInterface
+    {
+        return new Region(this.identityCardNumber.substr(0, 6));
     }
 }

@@ -1,3 +1,5 @@
+import { RegionInterface } from "./region.interface";
+
 export interface IdentityInterface
 {
     /**
@@ -14,5 +16,19 @@ export interface IdentityInterface
      * @return string
      * @author Seven Du <shiweidu@outlook.com>
      */
-    birthday(): string
+    birthday(): string;
+
+    /**
+     * Get the ID Card People Gender.
+     *
+     * @return {string}
+     * @author Seven Du <shiweidu@outlook.com>
+     */
+    gender(): string;
+
+    /**
+     * Get region class.
+     * @author Seven Du <shiweidu@outlook.com>
+     */
+    region(): RegionInterface;
 }
