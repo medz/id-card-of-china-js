@@ -14,10 +14,14 @@
   "author": "Seven Du <shiweidu@outlook.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "NODE_ENV=development webpack --debug --progress --colors"
+    "dev": "NODE_ENV=development webpack --debug --progress --colors",
+    "test": "jest"
   },
   "devDependencies": {
+    "@types/jest": "^23.0.0",
     "clean-webpack-plugin": "^0.1.19",
+    "jest": "^23.1.0",
+    "ts-jest": "^22.4.6",
     "ts-loader": "^4.3.0",
     "typescript": "^2.8.3",
     "webpack": "^4.10.1",
