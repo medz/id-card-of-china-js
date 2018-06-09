@@ -2,7 +2,7 @@
 
 中华人民共和国身份证（The identity card of the people's Republic of China）
 
->  PHP 版本：https://githu.com/medz/id-card-of-china
+>  PHP 版本：https://github.com/medz/id-card-of-china
 
 `id-card-of-china` 是一个基于「公民身份号码」规则获取公民身份号码中包含的基础信息组件。
 
