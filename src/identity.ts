@@ -34,7 +34,7 @@ export class Identity implements IdentityInterface
 
         return (regionCode >= 110000
              && regionCode <= 820000
-             && validateDate(this.birthday().replace('-', ''))
+             && validateDate(this.birthday().replace(/\-/isg, ''))
              && validateCheckCode(this.identityCardNumber)
         );
     }
