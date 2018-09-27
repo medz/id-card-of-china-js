@@ -13,6 +13,8 @@
   "repository": "https://github.com/medz/id-card-of-china-js.git",
   "author": "Seven Du <shiweidu@outlook.com>",
   "license": "MIT",
+  "main": "dist/id-card-china.js",
+  "module": "src/main.ts",
   "scripts": {
     "dev": "NODE_ENV=development webpack --debug --progress --colors",
     "build": "NODE_ENV=production webpack --debug --progress --colors",
